@@ -17,8 +17,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('Auth/Create Authentication'))
+response = WS.sendRequest(findTestObject('Booking/Create Booking'))
 
-GlobalVariable.url = WS.getElementPropertyValue(response, 'token')
+WS.verifyElementPropertyValue(response, 'booking.firstname', "Rian")
+WS.verifyElementPropertyValue(response, 'booking.lastname', "Gunawan")
+WS.verifyElementPropertyValue(response, 'booking.totalprice', 320)
+WS.verifyElementPropertyValue(response, 'booking.depositpaid', false)
+WS.verifyElementPropertyValue(response, 'booking.bookingdates.checkin', "2024-02-19")
+WS.verifyElementPropertyValue(response, 'booking.bookingdates.checkout', "2024-02-28")
+WS.verifyElementPropertyValue(response, 'booking.additionalneeds', "Dinner")
 
-WS.verifyResponseStatusCode(response, 200)
+GlobalVariable.bookingId = WS.getElementText(response, 'bookingid')
+println GlobalVariable.bookingId
