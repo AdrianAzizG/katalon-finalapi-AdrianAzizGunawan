@@ -14,4 +14,9 @@
       <initValue>''</initValue>
       <name>token</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>bookingId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
