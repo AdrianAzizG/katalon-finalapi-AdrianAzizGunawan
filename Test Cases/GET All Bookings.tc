@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>GET All Bookings</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e897eee6-6125-4e3e-bbd1-01d70bdf66f6</testCaseGuid>
+</TestCaseEntity>
